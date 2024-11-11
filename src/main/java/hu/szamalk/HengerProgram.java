@@ -16,17 +16,24 @@ public class HengerProgram {
     public void run(){
         int db = MertaniHenger.getHengerDb();
         System.out.printf("A feladatban használt hengerek (% db):\n ",db);
-        MertaniHenger m = new MertaniHenger(1, 1);
-        TomorHenger t = new TomorHenger(1, 1);
-        LyukasHenger ly = new LyukasHenger(1,1, .5);
-        System.out.println("m="+m);
-        System.out.println("t="+t);
-        System.out.println("ly="+ly);
-
+        for (MertaniHenger henger: hengerek){
+            System.out.println(henger);
+        }
+        for(MertaniHenger henger : this.lista()){
+            System.out.println(henger);
+        }
+        System.out.println("Hemgerek átlag térfogata: "+this.atlagTerfogat());
+        System.out.println("Csövek súlya"+this.csovekSulya());
     }
 
     public HengerProgram() {
         hengerek = new ArrayList<>();
+        hengerek.add( new MertaniHenger(1, 1));
+        hengerek.add(new TomorHenger(1, 1));
+        hengerek.add(new LyukasHenger(1,1, .5));
+        hengerek.add(new LyukasHenger(1,1, .7));
+        hengerek.add(new LyukasHenger(1,1, .8));
+
     }
 
     public double atlagTerfogat(){
