@@ -13,9 +13,7 @@ public class LyukasHenger extends TomorHenger {
         this.falvastagsag = falvastagsag;
     }
 
-    public double getFalvastagsag() {
-        return falvastagsag;
-    }
+
 
     @Override
     public String toString() {
