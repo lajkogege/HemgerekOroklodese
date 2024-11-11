@@ -3,7 +3,7 @@ package hu.szamalk.Model;
 public class LyukasHenger extends TomorHenger {
     private double falvastagsag;
 
-    public LyukasHenger(double sugar, double magassag, double falvastagsag) {
+    public LyukasHenger(int i, double sugar, double magassag) {
         this(sugar, magassag,1,falvastagsag);
 
     }
@@ -19,7 +19,9 @@ public class LyukasHenger extends TomorHenger {
 
     @Override
     public String toString() {
-        return "LyukasHenger{" +
+
+        String os = super.toString();
+        return os + "<I--LyukasHenger{" +
                 "falvastagsag=" + falvastagsag +
                 '}';
     }
