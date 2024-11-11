@@ -47,6 +47,19 @@ public class HengerProgram {
     }
 
     public double csovekSulya(){
+        double ossz=0;
+        for (MertaniHenger henger :  hengerek){
+            if(henger instanceof  LyukasHenger)
+            {
+                //2.sorban
+                //LyukasHenger h = (LyukasHenger) henger;
+                //ossz+= h.suly();
+
+                //1.sorban
+                ossz+=((LyukasHenger) henger).suly();
+            }
+
+        }
         return 0.0;
     }
 

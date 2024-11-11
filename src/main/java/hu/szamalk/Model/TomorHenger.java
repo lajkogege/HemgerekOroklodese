@@ -17,6 +17,10 @@ public class TomorHenger extends MertaniHenger{
         return fajsuly;
     }
 
+    public double  suly(){
+        return 0.0;
+    }
+
     @Override
     public String toString() {
 
